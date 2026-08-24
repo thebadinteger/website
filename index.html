@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>badinteger</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="life-canvas"></canvas>
+
+    <div class="lang-switch" id="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="en">en</button>
+        <span class="lang-divider">/</span>
+        <button type="button" class="lang-btn" data-lang="ru">ru</button>
+    </div>
+
+    <main class="container">
+        <div class="title-wrapper">
+            <h1 class="typed-title"><span id="typed-text"></span><span class="cursor">█</span></h1>
+        </div>
+
+        <section class="bio-section" id="bio-section">
+            <h2 class="bio-title" id="bio-title">hi.</h2>
+            <p class="bio-desc" id="bio-desc">
+                i'm <strong class="highlight">a reverse engineer</strong>, interested in IoT devices<br>
+                love all kinds of unusual gadgets<br>
+                from ukraine<br>
+                <strong class="highlight">languages: Go, Nim, Python</strong>
+            </p>
+        </section>
+
+        <div class="links-group">
+            <a href="https://github.com/thebadinteger" target="_blank" rel="noopener noreferrer" class="hacker-btn">
+                github
+            </a>
+            <a href="https://t.me/badinteger" target="_blank" rel="noopener noreferrer" class="hacker-btn">
+                telegram
+            </a>
+
+            <div class="support-wrapper" id="support-wrapper">
+                <button type="button" class="hacker-btn support-btn" id="support-toggle" aria-expanded="false">
+                    <span id="support-label">support</span>
+                    <span class="arrow-icon" id="support-arrow">v</span>
+                </button>
+                <div class="support-content" id="support-content">
+                    <div class="crypto-item" data-address="UQDhC6F5A6lHq3WMk80klpFoxfPlviY0URLN7MnfLXbfXJLn">
+                        <div class="crypto-header">
+                            <span class="crypto-name">gram</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">UQDhC6F5A6lHq3WMk80klpFoxfPlviY0URLN7MnfLXbfXJLn</code>
+                    </div>
+                    <div class="crypto-item" data-address="EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3">
+                        <div class="crypto-header">
+                            <span class="crypto-name">solana</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3</code>
+                    </div>
+                    <div class="crypto-item" data-address="bc1q3hcddk5h7lk9gmyz4qevt4zdrae28wd0h9fc9k">
+                        <div class="crypto-header">
+                            <span class="crypto-name">bitcoin</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">bc1q3hcddk5h7lk9gmyz4qevt4zdrae28wd0h9fc9k</code>
+                    </div>
+                    <div class="crypto-item" data-address="LNvCLwaYj91dwe1wWEHuQybgGu7N53fG1J">
+                        <div class="crypto-header">
+                            <span class="crypto-name">litecoin</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">LNvCLwaYj91dwe1wWEHuQybgGu7N53fG1J</code>
+                    </div>
+                    <div class="crypto-item" data-address="D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC">
+                        <div class="crypto-header">
+                            <span class="crypto-name">dogecoin</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC</code>
+                    </div>
+                    <div class="crypto-item" data-address="TSzSPDRZxyQy6w5US88ur5SCgcZgPubDzC">
+                        <div class="crypto-header">
+                            <span class="crypto-name">tron</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">TSzSPDRZxyQy6w5US88ur5SCgcZgPubDzC</code>
+                    </div>
+                    <div class="crypto-item" data-address="0x48a1577525e1057923bb760d62b2b98e0caff4e4">
+                        <div class="crypto-header">
+                            <span class="crypto-name">polygon</span>
+                            <span class="copy-hint" data-copy-hint="true">[copy]</span>
+                        </div>
+                        <code class="crypto-addr">0x48a1577525e1057923bb760d62b2b98e0caff4e4</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="thnx-wrapper" id="thnx-wrapper">
+        <div class="thnx-content" id="thnx-content">
+            <a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener noreferrer" class="thnx-link">font by jetbrains</a>
+            <a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="thnx-link">host by render</a>
+            <a href="https://freedns.afraid.org/" target="_blank" rel="noopener noreferrer" class="thnx-link">domain by freedns</a>
+        </div>
+        <button type="button" class="thnx-btn" id="thnx-toggle" aria-expanded="false">thnx</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
