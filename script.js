@@ -297,7 +297,7 @@
         },
         ru: {
             bioTitle: "привет.",
-            bioDesc: 'я <strong class="highlight">реверс-инженер</strong>, интересуюсь IoT девайсами<br>мне нравятся разные необычные гаджеты<br>из украины<br><strong class="highlight">языки: Go, Nim, Python</strong>',
+            bioDesc: 'я <strong class="highlight">реверс-инженер</strong>, интересуюсь IoT девайсами<br>мне нравятся разные гаджеты<br>из украины<br><strong class="highlight">языки: Go, Nim, Python</strong>',
             support: "поддержать",
             copyHint: "[копировать]",
             copiedHint: "[скопировано!]"
