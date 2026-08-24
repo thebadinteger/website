@@ -290,14 +290,14 @@
     var translations = {
         en: {
             bioTitle: "hi.",
-            bioDesc: 'I\'m <strong class="highlight">a reverse engineer</strong>, interested in IoT devices<br>love all kinds of unusual gadgets<br>from ukraine<br><strong class="highlight">languages: Go, Nim, Python</strong>',
+            bioDesc: 'i\'m <strong class="highlight">a reverse engineer</strong>, interested in IoT devices.<br>love all kinds of unusual gadgets.<br>from ukraine.<br><strong class="highlight">languages: Go, Nim, Python</strong>',
             support: "support",
             copyHint: "[copy]",
             copiedHint: "[copied!]"
         },
         ru: {
             bioTitle: "привет.",
-            bioDesc: 'я <strong class="highlight">реверс-инженер</strong>, интересуюсь IoT девайсами<br>мне нравятся разные гаджеты<br>из украины<br><strong class="highlight">языки: Go, Nim, Python</strong>',
+            bioDesc: 'я <strong class="highlight">реверс-инженер</strong>, интересуюсь IoT девайсами.<br>люблю всякие необычные гаджеты.<br>из украины.<br><strong class="highlight">языки: Go, Nim, Python</strong>',
             support: "поддержать",
             copyHint: "[копировать]",
             copiedHint: "[скопировано!]"
