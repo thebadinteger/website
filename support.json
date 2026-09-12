@@ -1,0 +1,30 @@
+[
+  {
+    "name": "gram",
+    "address": "UQDhC6F5A6lHq3WMk80klpFoxfPlviY0URLN7MnfLXbfXJLn"
+  },
+  {
+    "name": "solana",
+    "address": "EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3"
+  },
+  {
+    "name": "bitcoin",
+    "address": "bc1q3hcddk5h7lk9gmyz4qevt4zdrae28wd0h9fc9k"
+  },
+  {
+    "name": "litecoin",
+    "address": "LNvCLwaYj91dwe1wWEHuQybgGu7N53fG1J"
+  },
+  {
+    "name": "dogecoin",
+    "address": "D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC"
+  },
+  {
+    "name": "tron",
+    "address": "TSzSPDRZxyQy6w5US88ur5SCgcZgPubDzC"
+  },
+  {
+    "name": "polygon",
+    "address": "0x48a1577525e1057923bb760d62b2b98e0caff4e4"
+  }
+]

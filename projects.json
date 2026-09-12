@@ -1,0 +1,26 @@
+[
+  {
+    "name": "p2pwn",
+    "url": "https://github.com/thebadinteger/p2pwn",
+    "desc": {
+      "en": "Dahua cameras security scanner via P2P",
+      "ru": "cканер безопасности камер Dahua через P2P"
+    }
+  },
+  {
+    "name": "bio",
+    "url": "https://github.com/thebadinteger/thebadinteger",
+    "desc": {
+      "en": "my bio",
+      "ru": "мое био"
+    }
+  },
+  {
+    "name": "website",
+    "url": "https://github.com/thebadinteger/website",
+    "desc": {
+      "en": "my website",
+      "ru": "мой вебсайт"
+    }
+  }
+]
