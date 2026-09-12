@@ -9,7 +9,7 @@
     var rows = 0;
     var grid = null;
     var nextGrid = null;
-    var isDrawing = false;
+    var waves = [];
 
     var requestAnimFrame = window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
@@ -50,6 +50,9 @@
         var total = cols * rows;
         grid = createArray(total);
         nextGrid = createArray(total);
+        waves = [];
+        lastX = -1;
+        lastY = -1;
 
         var offsetX = Math.random() * 500;
         var offsetY = Math.random() * 500;
@@ -66,6 +69,15 @@
     }
 
     function updateGameOfLife() {
+        for (var w = waves.length - 1; w >= 0; w--) {
+            var wave = waves[w];
+            var dens = 0.58 * (1 - (wave.r / wave.maxR) * 0.5);
+            drawRing(wave.cx, wave.cy, Math.round(wave.r), dens);
+            wave.r += 2.5;
+            if (wave.r > wave.maxR) {
+                waves.splice(w, 1);
+            }
+        }
         for (var y = 0; y < rows; y++) {
             var up = (y === 0 ? rows - 1 : y - 1) * cols;
             var mid = y * cols;
@@ -121,16 +133,70 @@
         }
     }
 
-    function draw2x2(clientX, clientY) {
-        var startX = Math.floor(clientX / CELL_SIZE);
-        var startY = Math.floor(clientY / CELL_SIZE);
+    function setCell(x, y) {
+        if (x >= 0 && x < cols && y >= 0 && y < rows) {
+            grid[y * cols + x] = 2;
+        }
+    }
+
+    function draw2x2Grid(startX, startY) {
+        if (!grid) return;
         for (var dy = 0; dy < 2; dy++) {
             for (var dx = 0; dx < 2; dx++) {
-                var x = (startX + dx + cols) % cols;
-                var y = (startY + dy + rows) % rows;
-                grid[y * cols + x] = 2;
+                setCell(startX + dx, startY + dy);
             }
         }
+    }
+
+    function drawLine(x0, y0, x1, y1) {
+        var dx = Math.abs(x1 - x0);
+        var dy = Math.abs(y1 - y0);
+        var sx = (x0 < x1) ? 1 : -1;
+        var sy = (y0 < y1) ? 1 : -1;
+        var err = dx - dy;
+        while (true) {
+            draw2x2Grid(x0, y0);
+            if (x0 === x1 && y0 === y1) break;
+            var e2 = 2 * err;
+            if (e2 > -dy) { err -= dy; x0 += sx; }
+            if (e2 < dx) { err += dx; y0 += sy; }
+        }
+    }
+
+    function drawRing(cx, cy, r, dens) {
+        if (!grid) return;
+        if (r <= 0) {
+            draw2x2Grid(cx, cy);
+            return;
+        }
+        var d = typeof dens === 'number' ? dens : 0.55;
+        var x = r, y = 0, err = 0;
+        while (x >= y) {
+            if (Math.random() < d) setCell(cx + x, cy + y);
+            if (Math.random() < d) setCell(cx + y, cy + x);
+            if (Math.random() < d) setCell(cx - y, cy + x);
+            if (Math.random() < d) setCell(cx - x, cy + y);
+            if (Math.random() < d) setCell(cx - x, cy - y);
+            if (Math.random() < d) setCell(cx - y, cy - x);
+            if (Math.random() < d) setCell(cx + y, cy - x);
+            if (Math.random() < d) setCell(cx + x, cy - y);
+            y += 1;
+            err += 1 + 2 * y;
+            if (2 * (err - x) + 1 > 0) {
+                x -= 1;
+                err += 1 - 2 * x;
+            }
+        }
+    }
+
+    function spawnWave(clientX, clientY) {
+        if (!cols || !rows) return;
+        var cx = Math.floor(clientX / CELL_SIZE);
+        var cy = Math.floor(clientY / CELL_SIZE);
+        var maxR = Math.max(16, Math.round(Math.min(cols, rows) * 0.38));
+        waves.push({ cx: cx, cy: cy, r: 1, maxR: maxR });
+        draw2x2Grid(cx, cy);
+        drawLife();
     }
 
     function isInteractive(el) {
@@ -138,44 +204,78 @@
             var tag = (el.tagName || '').toLowerCase();
             if (tag === 'a' || tag === 'button' || tag === 'input' || tag === 'textarea') return true;
             var c = el.className || '';
-            if (typeof c === 'string' && (c.indexOf('container') !== -1 || c.indexOf('lang-switch') !== -1 || c.indexOf('webring') !== -1 || c.indexOf('thnx') !== -1)) return true;
+            if (typeof c === 'string' && (
+                c.indexOf('crypto-item') !== -1 ||
+                c.indexOf('accordion-dropdown') !== -1 ||
+                c.indexOf('lang-switch') !== -1 ||
+                c.indexOf('webring-wrapper') !== -1 ||
+                c.indexOf('thnx-wrapper') !== -1
+            )) return true;
             el = el.parentNode;
         }
         return false;
     }
 
-    function onPointerDown(e) {
-        if (isInteractive(e.target || e.srcElement)) return;
-        isDrawing = true;
-        var cx = e.clientX || (e.touches && e.touches[0] && e.touches[0].clientX) || 0;
-        var cy = e.clientY || (e.touches && e.touches[0] && e.touches[0].clientY) || 0;
-        draw2x2(cx, cy);
-    }
+    var lastX = -1;
+    var lastY = -1;
+    var lastWaveTime = 0;
 
     function onPointerMove(e) {
-        if (isDrawing) {
-            var cx = e.clientX || (e.touches && e.touches[0] && e.touches[0].clientX) || 0;
-            var cy = e.clientY || (e.touches && e.touches[0] && e.touches[0].clientY) || 0;
-            draw2x2(cx, cy);
+        var cx = e.clientX;
+        var cy = e.clientY;
+        if (typeof cx !== 'number' && e.touches && e.touches[0]) {
+            cx = e.touches[0].clientX;
+            cy = e.touches[0].clientY;
         }
+        if (typeof cx !== 'number') return;
+
+        if (isInteractive(e.target || e.srcElement)) {
+            lastX = -1;
+            lastY = -1;
+            return;
+        }
+
+        var gx = Math.floor(cx / CELL_SIZE);
+        var gy = Math.floor(cy / CELL_SIZE);
+
+        if (lastX >= 0 && lastY >= 0 && (Math.abs(gx - lastX) > 1 || Math.abs(gy - lastY) > 1)) {
+            drawLine(lastX, lastY, gx, gy);
+        } else {
+            draw2x2Grid(gx, gy);
+        }
+
+        lastX = gx;
+        lastY = gy;
     }
 
-    function onPointerUp() {
-        isDrawing = false;
+    function onWaveTrigger(e) {
+        if (typeof e.button === 'number' && e.button !== 0) return;
+        var now = new Date().getTime();
+        if (now - lastWaveTime < 100) return;
+        lastWaveTime = now;
+
+        var cx = e.clientX;
+        var cy = e.clientY;
+        if (typeof cx !== 'number' && e.touches && e.touches[0]) {
+            cx = e.touches[0].clientX;
+            cy = e.touches[0].clientY;
+        }
+        if (typeof cx !== 'number') return;
+
+        spawnWave(cx, cy);
     }
 
     if (window.PointerEvent) {
-        window.addEventListener('pointerdown', onPointerDown, false);
         window.addEventListener('pointermove', onPointerMove, false);
-        window.addEventListener('pointerup', onPointerUp, false);
-        window.addEventListener('pointercancel', onPointerUp, false);
+        window.addEventListener('pointerdown', onWaveTrigger, true);
+        window.addEventListener('pointerleave', function() { lastX = -1; lastY = -1; }, false);
     } else {
-        window.addEventListener('mousedown', onPointerDown, false);
         window.addEventListener('mousemove', onPointerMove, false);
-        window.addEventListener('mouseup', onPointerUp, false);
-        window.addEventListener('touchstart', onPointerDown, false);
         window.addEventListener('touchmove', onPointerMove, false);
-        window.addEventListener('touchend', onPointerUp, false);
+        window.addEventListener('mousedown', onWaveTrigger, true);
+        window.addEventListener('touchstart', onWaveTrigger, true);
+        window.addEventListener('mouseout', function() { lastX = -1; lastY = -1; }, false);
+        window.addEventListener('touchend', function() { lastX = -1; lastY = -1; }, false);
     }
 
     var lastUpdate = 0;

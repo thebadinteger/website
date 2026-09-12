@@ -360,12 +360,48 @@ html, body {
     width: 100%;
 }
 
-@supports not (gap: 10px) {
-    .buttons-row > * + * {
-        margin-left: 10px;
+.container > * + * {
+    margin-top: 14px;
+}
+
+.bio-section > * + * {
+    margin-top: 6px;
+}
+
+.links-group > * + * {
+    margin-top: 10px;
+}
+
+.buttons-row > * + * {
+    margin-left: 10px;
+}
+
+.dropdown-items > * + * {
+    margin-top: 3px;
+}
+
+.thnx-content > * + * {
+    margin-top: 4px;
+}
+
+@supports (gap: 10px) {
+    .container > * + * {
+        margin-top: 0;
+    }
+    .bio-section > * + * {
+        margin-top: 0;
     }
     .links-group > * + * {
-        margin-top: 10px;
+        margin-top: 0;
+    }
+    .buttons-row > * + * {
+        margin-left: 0;
+    }
+    .dropdown-items > * + * {
+        margin-top: 0;
+    }
+    .thnx-content > * + * {
+        margin-top: 0;
     }
 }
 
