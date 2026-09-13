@@ -344,27 +344,11 @@
 
     var defaultProjects = [
         {
-            name: 'p2pwn',
-            url: 'https://github.com/thebadinteger/p2pwn',
+            name: 'none',
+            url: 'none',
             desc: {
-                en: 'Dahua cameras security scanner via P2P',
-                ru: 'cканер безопасности камер Dahua через P2P'
-            }
-        },
-        {
-            name: 'bio',
-            url: 'https://github.com/thebadinteger/thebadinteger',
-            desc: {
-                en: 'my bio',
-                ru: 'мое био'
-            }
-        },
-        {
-            name: 'website',
-            url: 'https://github.com/thebadinteger/website',
-            desc: {
-                en: 'my website',
-                ru: 'мой вебсайт'
+                en: 'projects failed to load',
+                ru: 'не удалось загрузить проекты'
             }
         }
     ];
@@ -706,13 +690,11 @@
     function applyWebringData(prev, next) {
         if (prev && webringPrev && webringPrevName) {
             webringPrevName.innerHTML = escapeHTML(prev.name || prev.slug || '');
-            if (prev.slug) webringPrev.href = 'https://webring.otomir23.me/' + prev.slug;
-            else if (prev.url) webringPrev.href = prev.url;
+            if (prev.name) webringPrev.setAttribute('title', prev.name);
         }
         if (next && webringNext && webringNextName) {
             webringNextName.innerHTML = escapeHTML(next.name || next.slug || '');
-            if (next.slug) webringNext.href = 'https://webring.otomir23.me/' + next.slug;
-            else if (next.url) webringNext.href = next.url;
+            if (next.name) webringNext.setAttribute('title', next.name);
         }
     }
 })();
