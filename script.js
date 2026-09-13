@@ -345,7 +345,7 @@
     var defaultProjects = [
         {
             name: 'none',
-            url: 'none',
+            url: 'none.txt',
             desc: {
                 en: 'projects failed to load',
                 ru: 'не удалось загрузить проекты'
