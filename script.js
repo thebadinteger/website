@@ -324,7 +324,7 @@
     var translations = {
         en: {
             bioTitle: 'hi.',
-            bioDesc: 'i\'m <strong class="highlight">a reverse engineer</strong>.<br>love all kinds of unusual gadgets.<br>from ukraine.<br><strong class="highlight">languages:</strong> Go, Nim, Python, Java, JS<br><strong class="highlight">ide:</strong> Zed',
+            bioDesc: 'i\'m <strong class="highlight">a reverse engineer</strong>.<br>love all kinds of unusual gadgets.<br>from ukraine.<br><strong class="highlight">languages:</strong> Go, Nim, Python, Java, JS',
             channel: 'channel',
             projects: 'projects',
             support: 'support',
@@ -333,7 +333,7 @@
         },
         ru: {
             bioTitle: 'привет.',
-            bioDesc: 'я <strong class="highlight">реверс-инженер</strong>.<br>люблю всякие необычные гаджеты.<br>из украины.<br><strong class="highlight">языки:</strong> Go, Nim, Python, Java, JS<br><strong class="highlight">ide:</strong> Zed',
+            bioDesc: 'я <strong class="highlight">реверс-инженер</strong>.<br>люблю всякие необычные гаджеты.<br>из украины.<br><strong class="highlight">языки:</strong> Go, Nim, Python, Java, JS',
             channel: 'канал',
             projects: 'проекты',
             support: 'поддержать',
