@@ -1,30 +1,30 @@
 [
   {
-    "name": "gram",
-    "address": "UQDhC6F5A6lHq3WMk80klpFoxfPlviY0URLN7MnfLXbfXJLn"
+    "name": "bitcoin",
+    "address": "bc1pk4jcvmpwmjvyq3svs8xf6l4k5wgpdujljwx7xpdlmz8jfej404zspjpptf"
+  },
+  {
+    "name": "etherium",
+    "address": "0x48a1577525E1057923Bb760d62b2B98E0CAFF4E4"
   },
   {
     "name": "solana",
     "address": "EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3"
   },
   {
-    "name": "bitcoin",
-    "address": "bc1q3hcddk5h7lk9gmyz4qevt4zdrae28wd0h9fc9k"
+    "name": "ton",
+    "address": "UQBPH0o0hmgz86VSrde24r-E4V-Q23aW4UzyiKkMcJePIEYx"
   },
   {
-    "name": "litecoin",
-    "address": "LNvCLwaYj91dwe1wWEHuQybgGu7N53fG1J"
+    "name": "polygon",
+    "address": "0x48a1577525E1057923Bb760d62b2B98E0CAFF4E4"
   },
   {
     "name": "dogecoin",
     "address": "D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC"
   },
   {
-    "name": "tron",
-    "address": "TSzSPDRZxyQy6w5US88ur5SCgcZgPubDzC"
-  },
-  {
-    "name": "polygon",
-    "address": "0x48a1577525e1057923bb760d62b2b98e0caff4e4"
+    "name": "litecoin",
+    "address": "ltc1ped2lehk9f4umrm5suk04xuzdh3zw4zstv7mr8ks9w6t027x5qn5sl3vert"
   }
 ]
