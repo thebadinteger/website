@@ -8,11 +8,11 @@
     }
   },
   {
-    "name": "bio",
-    "url": "https://github.com/thebadinteger/thebadinteger",
+    "name": "rtsnap",
+    "url": "https://github.com/thebadinteger/rtsnap",
     "desc": {
-      "en": "my bio",
-      "ru": "мое био"
+      "en": "Go library for capturing snapshots from live RTSP streams",
+      "ru": "Go библиотека для захвата снимков из живых потоков RTSP"
     }
   },
   {
