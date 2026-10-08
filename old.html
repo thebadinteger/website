@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>badinteger</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body, tt, code, pre {
             font-family: sans-serif;
         }
-        details > summary {
-            list-style: none;
+        p {
+            margin: 4px 0;
         }
-        details > summary::-webkit-details-marker {
-            display: none;
+        h1 {
+            margin: 4px 0;
+            font-size: 1.8rem;
+        }
+        h3 {
+            margin: 6px 0 2px 0;
+            font-size: 1rem;
+        }
+        hr {
+            margin: 6px 0;
+            border: 0;
+            border-top: 1px solid #273d23;
         }
         @supports (display: flex) {
             html, body {
-                height: 100%;
+                min-height: 100%;
                 margin: 0;
             }
             body {
@@ -36,7 +49,7 @@
         }
     </style>
 </head>
-<body bgcolor="#050505" text="#dcdcdc" link="#a0d490" vlink="#a0d490" alink="#ffffff" style="background:#050505;color:#dcdcdc;margin:0;padding:16px;text-align:center;">
+<body bgcolor="#050505" text="#dcdcdc" link="#a0d490" vlink="#a0d490" alink="#ffffff" style="background:#050505;color:#dcdcdc;margin:0;padding:12px;text-align:center;">
     <center>
         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;text-align:center;">
             <tr>
@@ -56,55 +69,28 @@
                         [ <a href="https://t.me/thebadinteger" target="_blank">channel</a> ]
                     </p>
 
-                    <p>
-                        <details style="margin: 8px 0;">
-                            <summary style="cursor: pointer; color: #a0d490; font-weight: bold; outline: none;">[ &gt; projects ]</summary>
-                            <div style="padding-top: 8px;">
-                                <p>
-                                    <b><a href="https://github.com/thebadinteger/p2pwn" target="_blank">p2pwn</a></b><br>
-                                    <font size="-1">Dahua cameras security scanner via P2P</font>
-                                </p>
-                                <p>
-                                    <b><a href="https://github.com/thebadinteger/rtsnap" target="_blank">rtsnap</a></b><br>
-                                    <font size="-1">Go library for capturing snapshots from live RTSP streams</font>
-                                </p>
-                                <p>
-                                    <b><a href="https://github.com/thebadinteger/website" target="_blank">website</a></b><br>
-                                    <font size="-1">my website</font>
-                                </p>
-                            </div>
-                        </details>
+                    <hr width="100%" color="#273d23" size="1">
 
-                        <details style="margin: 8px 0;">
-                            <summary style="cursor: pointer; color: #a0d490; font-weight: bold; outline: none;">[ &gt; support ]</summary>
-                            <div style="padding-top: 8px;">
-                                <p>
-                                    <b>bitcoin:</b><br>
-                                    <font size="-1" color="#a0d490"><tt style="word-break:break-all;">bc1pk4jcvmpwmjvyq3svs8xf6l4k5wgpdujljwx7xpdlmz8jfej404zspjpptf</tt></font>
-                                </p>
-                                <p>
-                                    <b>etherium / polygon:</b><br>
-                                    <font size="-1" color="#a0d490"><tt style="word-break:break-all;">0x48a1577525E1057923Bb760d62b2B98E0CAFF4E4</tt></font>
-                                </p>
-                                <p>
-                                    <b>solana:</b><br>
-                                    <font size="-1" color="#a0d490"><tt style="word-break:break-all;">EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3</tt></font>
-                                </p>
-                                <p>
-                                    <b>ton:</b><br>
-                                    <font size="-1" color="#a0d490"><tt style="word-break:break-all;">UQBPH0o0hmgz86VSrde24r-E4V-Q23aW4UzyiKkMcJePIEYx</tt></font>
-                                </p>
-                                <p>
-                                    <b>dogecoin:</b><br>
-                                    <font size="-1" color="#a0d490"><tt style="word-break:break-all;">D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC</tt></font>
-                                </p>
-                                <p>
-                                    <b>litecoin:</b><br>
-                                    <font size="-1" color="#a0d490"><tt style="word-break:break-all;">ltc1ped2lehk9f4umrm5suk04xuzdh3zw4zstv7mr8ks9w6t027x5qn5sl3vert</tt></font>
-                                </p>
-                            </div>
-                        </details>
+                    <h3><font color="#a0d490">&gt; projects</font></h3>
+                    <p>
+                        <b><a href="https://github.com/thebadinteger/p2pwn" target="_blank">p2pwn</a></b> - <font size="-1">Dahua cameras security scanner via P2P</font><br>
+                        <b><a href="https://github.com/thebadinteger/rtsnap" target="_blank">rtsnap</a></b> - <font size="-1">Go library for capturing snapshots from live RTSP streams</font><br>
+                        <b><a href="https://github.com/thebadinteger/website" target="_blank">website</a></b> - <font size="-1">my website</font>
                     </p>
+
+                    <hr width="100%" color="#273d23" size="1">
+
+                    <h3><font color="#a0d490">&gt; support</font></h3>
+                    <p>
+                        <b>bitcoin:</b> <font size="-1" color="#a0d490"><tt style="word-break:break-all;">bc1pk4jcvmpwmjvyq3svs8xf6l4k5wgpdujljwx7xpdlmz8jfej404zspjpptf</tt></font><br>
+                        <b>etherium / polygon:</b> <font size="-1" color="#a0d490"><tt style="word-break:break-all;">0x48a1577525E1057923Bb760d62b2B98E0CAFF4E4</tt></font><br>
+                        <b>solana:</b> <font size="-1" color="#a0d490"><tt style="word-break:break-all;">EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3</tt></font><br>
+                        <b>ton:</b> <font size="-1" color="#a0d490"><tt style="word-break:break-all;">UQBPH0o0hmgz86VSrde24r-E4V-Q23aW4UzyiKkMcJePIEYx</tt></font><br>
+                        <b>dogecoin:</b> <font size="-1" color="#a0d490"><tt style="word-break:break-all;">D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC</tt></font><br>
+                        <b>litecoin:</b> <font size="-1" color="#a0d490"><tt style="word-break:break-all;">ltc1ped2lehk9f4umrm5suk04xuzdh3zw4zstv7mr8ks9w6t027x5qn5sl3vert</tt></font>
+                    </p>
+
+                    <hr width="100%" color="#273d23" size="1">
 
                     <p>
                         [ <a href="https://webring.otomir23.me/badinteger/prev">&lt; prev</a> ]
