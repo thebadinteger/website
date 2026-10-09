@@ -1,30 +1,30 @@
 [
   {
     "name": "bitcoin",
-    "address": "bc1pk4jcvmpwmjvyq3svs8xf6l4k5wgpdujljwx7xpdlmz8jfej404zspjpptf"
+    "address": "bc1prskjtpnkyr076nccqy4syjgjkuxdhh037xq00jan2ku6yk8pv3dqjxful9"
   },
   {
     "name": "etherium",
-    "address": "0x48a1577525E1057923Bb760d62b2B98E0CAFF4E4"
+    "address": "0xCa02e7D0d24f3efc4Ed9AdD464E94f7079e5f6be"
   },
   {
     "name": "solana",
-    "address": "EBzxd3aD9AJJCiJihh45mPns22LBTFG1UUhGEQawaHC3"
+    "address": "kFbcY5513r1GY9pYWG53MBUnRsMkFB65TpnUdD5jWSd"
   },
   {
     "name": "ton",
-    "address": "UQBPH0o0hmgz86VSrde24r-E4V-Q23aW4UzyiKkMcJePIEYx"
+    "address": "UQDHTf_7f0cN8Id7BBBeFplkj1xsosmWqyjSVufJFfdzXNgG"
   },
   {
     "name": "polygon",
-    "address": "0x48a1577525E1057923Bb760d62b2B98E0CAFF4E4"
+    "address": "0xCa02e7D0d24f3efc4Ed9AdD464E94f7079e5f6be"
   },
   {
     "name": "dogecoin",
-    "address": "D6TasSMp86DWj7ovyzoroSdZFYt65pMNyC"
+    "address": "DLkZYu5e2V2a4YXeXcGVoun5SYQ4Zbdh9B"
   },
   {
     "name": "litecoin",
-    "address": "ltc1ped2lehk9f4umrm5suk04xuzdh3zw4zstv7mr8ks9w6t027x5qn5sl3vert"
+    "address": "ltc1p7kgsehjc8xn093ud3d765w9q03hk2rmhdufsdd6sydfnasez7tks26u6sd"
   }
 ]
