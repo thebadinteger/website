@@ -1,0 +1,30 @@
+[
+  {
+    "name": "bitcoin",
+    "address": "bc1prskjtpnkyr076nccqy4syjgjkuxdhh037xq00jan2ku6yk8pv3dqjxful9"
+  },
+  {
+    "name": "etherium",
+    "address": "0xCa02e7D0d24f3efc4Ed9AdD464E94f7079e5f6be"
+  },
+  {
+    "name": "solana",
+    "address": "kFbcY5513r1GY9pYWG53MBUnRsMkFB65TpnUdD5jWSd"
+  },
+  {
+    "name": "ton",
+    "address": "UQDHTf_7f0cN8Id7BBBeFplkj1xsosmWqyjSVufJFfdzXNgG"
+  },
+  {
+    "name": "polygon",
+    "address": "0xCa02e7D0d24f3efc4Ed9AdD464E94f7079e5f6be"
+  },
+  {
+    "name": "dogecoin",
+    "address": "DLkZYu5e2V2a4YXeXcGVoun5SYQ4Zbdh9B"
+  },
+  {
+    "name": "litecoin",
+    "address": "ltc1p7kgsehjc8xn093ud3d765w9q03hk2rmhdufsdd6sydfnasez7tks26u6sd"
+  }
+]

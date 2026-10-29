@@ -1,0 +1,26 @@
+[
+  {
+    "name": "rtsnap",
+    "url": "https://github.com/thebadinteger/rtsnap",
+    "desc": {
+      "en": "Go library for capturing snapshots from live RTSP streams",
+      "ru": "Go библиотека для захвата снимков живых RTSP потоков"
+    }
+  },
+  {
+    "name": "prx",
+    "url": "https://github.com/thebadinteger/prx",
+    "desc": {
+      "en": "universal proxy client and server library for nim",
+      "ru": "универсальная прокси сервер-клиент библиотека для nim"
+    }
+  },
+  {
+    "name": "website",
+    "url": "https://github.com/thebadinteger/website",
+    "desc": {
+      "en": "my website",
+      "ru": "мой вебсайт"
+    }
+  }
+]

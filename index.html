@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>badinteger</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alt icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="life-canvas"></canvas>
+
+    <div class="lang-switch" id="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="en">en</button>
+        <span class="lang-divider">/</span>
+        <button type="button" class="lang-btn" data-lang="ru">ru</button>
+    </div>
+
+    <main class="container">
+        <div class="title-wrapper">
+            <h1 class="typed-title"><span id="typed-text"></span><span class="cursor">█</span></h1>
+        </div>
+
+        <section class="bio-section" id="bio-section">
+            <h2 class="bio-title" id="bio-title">hi.</h2>
+            <p class="bio-desc" id="bio-desc">
+                i'm <strong class="highlight">a reverse engineer</strong>.<br>
+                love all kinds of unusual gadgets.<br>
+                from ukraine.<br>
+                <strong class="highlight">languages:</strong> Go, Nim, Python, Java<br>
+            </p>
+        </section>
+
+        <div class="links-group">
+            <div class="buttons-row">
+                <a href="https://github.com/thebadinteger" target="_blank" rel="noopener noreferrer" class="site-btn">
+                    github
+                </a>
+                <a href="https://t.me/badinteger" target="_blank" rel="noopener noreferrer" class="site-btn">
+                    telegram
+                </a>
+                <a href="https://t.me/thebadinteger" target="_blank" rel="noopener noreferrer" class="site-btn">
+                    <span id="channel-label">channel</span>
+                </a>
+            </div>
+
+            <div class="buttons-row accordion-nav">
+                <button type="button" class="site-btn toggle-btn" id="projects-toggle" aria-expanded="false">
+                    <span id="projects-label">projects</span>
+                    <span class="arrow-icon" id="projects-arrow">v</span>
+                </button>
+                <button type="button" class="site-btn toggle-btn" id="support-toggle" aria-expanded="false">
+                    <span id="support-label">support</span>
+                    <span class="arrow-icon" id="support-arrow">v</span>
+                </button>
+            </div>
+
+            <div class="accordion-container" id="accordion-container">
+                <div class="accordion-inner">
+                    <div class="accordion-dropdown" id="projects-panel">
+                        <div class="dropdown-items" id="projects-content"></div>
+                    </div>
+
+                    <div class="accordion-dropdown" id="support-panel">
+                        <div class="dropdown-items" id="support-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="webring-wrapper" id="webring-wrapper">
+        <a href="https://webring.otomir23.me/badinteger/prev" class="webring-link webring-side webring-prev" id="webring-prev"><span class="webring-arrow">&lt;</span><span class="webring-name" id="webring-prev-name">prev</span></a>
+        <a href="https://webring.otomir23.me/" class="webring-link webring-main" id="webring-main">otoring</a>
+        <a href="https://webring.otomir23.me/badinteger/next" class="webring-link webring-side webring-next" id="webring-next"><span class="webring-name" id="webring-next-name">next</span><span class="webring-arrow">&gt;</span></a>
+    </div>
+
+    <div class="thnx-wrapper" id="thnx-wrapper">
+        <button type="button" class="thnx-btn" id="thnx-toggle" aria-expanded="false">thnx</button>
+        <div class="thnx-content" id="thnx-content">
+            <a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener noreferrer" class="thnx-link">font by jetbrains</a>
+            <a href="https://render.com/" target="_blank" rel="noopener noreferrer" class="thnx-link">host by render</a>
+            <a href="https://freedns.afraid.org/" target="_blank" rel="noopener noreferrer" class="thnx-link">domain by freedns</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
